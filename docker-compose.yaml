@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: torgash_kostin
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+      MYSQL_INIT_COMMAND: "SET GLOBAL log_bin_trust_function_creators=1;"
+    volumes:
+      - ./my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./mysql-data:/var/lib/mysql
