@@ -3,6 +3,7 @@
 
 -- 2)	Сделать резервную копию учебной базы данных с именем dump_arh_<ваша фамилия> в архивном формате с подробным выводом информации на экран
 -- mysqldump -h 127.0.0.1 -P 3306 -v -u root -p torgash_kostin | gzip > /tmp/dump_arh_kostin.sql.gz
+-- gunzip /tmp/dump_arh_kostin.sql.gz
 
 -- 3)	Создать резервную копию таблицы «Заказы» с именем dump_orders_<ваша фамилия>
 -- mysqldump -h 127.0.0.1 -P 3306 -v -u root -p torgash_kostin orders > /tmp/dump_orders_kostin.sql
