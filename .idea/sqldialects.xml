@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/tasks/11.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/12.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/13.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/tasks/14.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/tasks/17.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/4_torgash.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/5_1.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/5_2.sql" dialect="MySQL" />
@@ -13,5 +15,6 @@
     <file url="file://$PROJECT_DIR$/tasks/7_2.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/7_3.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/7_4.sql" dialect="MySQL" />
+    <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

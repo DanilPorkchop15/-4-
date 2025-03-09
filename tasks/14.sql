@@ -1,0 +1,29 @@
+-- Создание генераторов (они доступны только в СУБД Interbase и Firebird)
+CREATE GENERATOR ORDER_ID_GEN;
+CREATE GENERATOR CUSTOMER_FIZ_ID_GEN;
+CREATE GENERATOR CUSTOMER_YUR_ID_GEN;
+
+
+-- Триггеры на использование генераторов в качестве значений первичных ключей
+DELIMITER //
+CREATE TRIGGER BI_ORDERS
+    BEFORE INSERT ON orders
+    FOR EACH ROW
+BEGIN
+SET NEW.id_z = GEN_ID(ORDER_ID_GEN, 1);
+END //
+
+CREATE TRIGGER BI_CUSTOMER_FIZ
+    BEFORE INSERT ON customers_fiz
+    FOR EACH ROW
+BEGIN
+SET NEW.id_cf = GEN_ID(CUSTOMER_FIZ_ID_GEN, 1);
+END //
+
+CREATE TRIGGER BI_CUSTOMER_YUR
+    BEFORE INSERT ON customers_yur
+    FOR EACH ROW
+BEGIN
+SET NEW.id_cy = GEN_ID(CUSTOMER_YUR_ID_GEN, 1);
+END //
+DELIMITER ;
