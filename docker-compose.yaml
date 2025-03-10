@@ -11,4 +11,5 @@ services:
       MYSQL_INIT_COMMAND: "SET GLOBAL log_bin_trust_function_creators=1;"
     volumes:
       - ./my.cnf:/etc/mysql/conf.d/my.cnf
-      - ./mysql-data:/var/lib/mysql
+      - ./mysql-data:/var/lib/mysql-
+      - ./files:/var/lib/mysql-files
