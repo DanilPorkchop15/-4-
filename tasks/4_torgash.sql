@@ -53,7 +53,7 @@ INSERT INTO skid (id_sk, skid, uslovie) VALUES
 
 
 -- Таблица 4: Заказчики физ.лица (customers_fiz)
-CREATE TABLE customers_fiz (
+CREATE TABLE customers_fiz (https://lichess.org/wngfLs59
                                id_cf INT PRIMARY KEY AUTO_INCREMENT,
                                name VARCHAR(100) NOT NULL,
                                city VARCHAR(50) NOT NULL,

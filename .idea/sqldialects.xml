@@ -16,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/tasks/7_3.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/7_4.sql" dialect="MySQL" />
     <file url="file://$PROJECT_DIR$/tasks/8_9.sql" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/tasks/up.sql" dialect="MySQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

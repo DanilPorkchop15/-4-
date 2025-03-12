@@ -1,4 +1,4 @@
-CREATE DATABASE Biblioteka;
+# CREATE DATABASE Biblioteka;
 USE Biblioteka;
 
 CREATE TABLE Author (
@@ -111,3 +111,24 @@ BEGIN
 END$$
 
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE TRIGGER insert_status_house
+    AFTER INSERT ON Publisher
+    FOR EACH ROW
+BEGIN
+    IF NEW.status = 'аннулированное' THEN
+        UPDATE Book SET publisher_id = NULL WHERE publisher_id = NEW.id;
+    END IF;
+END$$
+
+DELIMITER ;
+
+UPDATE Publisher SET status = 'аннулированное' WHERE id = 1;
+
+SELECT * FROM Book WHERE publisher_id IS NULL;
+
+INSERT INTO Publisher (name, status) VALUES ('New House', 'аннулированное');
+
+SELECT * FROM Book WHERE Book.publisher_id IS NULL;
